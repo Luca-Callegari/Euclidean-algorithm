@@ -1,0 +1,29 @@
+<HTML>
+  <HEAD>
+    <SCRIPT LANGUAGE="JavaScript">
+    </SCRIPT>
+  </HEAD>
+  <BODY>
+    <SCRIPT LANGUAGE="JavaScript">
+      var Anum = parseInt(prompt("inserire un numero intero"))
+      var Bnum = parseInt(prompt("inserire un'altro numero intero"))
+      if ( Anum<0 ) { Anum = Anum*(-1)}
+      if ( Bnum<0 ) { Bnum = Bnum*(-1)}
+      var vB = Bnum
+      if ( Bnum>Anum ) {
+        vB = Bnum  
+        Bnum = Anum
+        Anum = vB
+      }
+      var a = Anum
+      var b = Bnum
+      var r = ""
+      do {
+        r = a%b;
+        a = b;
+        b = r;
+      } while ( r > 0 );
+      document.write("Il MCD di"+" "+Anum+" "+"e"+" "+Bnum+" "+"e'"+" "+a)
+    </SCRIPT>
+  </BODY>
+</HTML>
